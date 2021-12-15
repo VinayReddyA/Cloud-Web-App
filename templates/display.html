@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-image: url('/static/background.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      color:white;
+      }
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      }
+
+    .header {
+      font-size: 50px;
+      padding-top: 100px;
+      text-align: center;  
+      }
+
+    .main {
+      font-size: 30px;
+      padding-top: 50px;
+      text-align: center;
+      }
+
+    .combo{
+      padding:4px;
+      color:black;
+      }
+  </style>
+</head>
+<body>
+      <div class="flex-container">
+        <div class="header"><b>TimeLog Parser</b></div>
+        <div class="main">
+          <form method="POST">
+            <h2>
+              <label for="f">Select TimeLog file : </label>
+              <select class="combo" name="tlf">
+                <option value="">Select file</option>
+                <option value="TimeLogCarbon.txt">TimeLogCarbon</option>
+                <option value="TimeLogEnergy.txt">TimeLogEnergy</option>
+                <option value="TimeLogNitrogen.txt">TimeLogNitrogen</option>
+                <option value="TimeLogWater.txt">TimeLogWater</option>
+                <option value="TimeLogWatershed.txt">TimeLogWatershed</option>
+              </select>
+            </h2>
+            <input class="btn btn-primary" type="submit" value="Submit">
+          </form>
+          <h3><label>{{filename}} &nbsp;  {{result}}</label></h3>
+          <h3><label>{{file_not_found}}</label></h3>
+        </div>
+        </div>  
+      </div>
+</body>
+</html>
